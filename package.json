@@ -1,0 +1,29 @@
+{
+  "name": "interview-q-trial",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc && node dist/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamesdebnam/interview-q-trial.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jamesdebnam/interview-q-trial/issues"
+  },
+  "homepage": "https://github.com/jamesdebnam/interview-q-trial#readme",
+  "devDependencies": {
+    "@types/express": "^4.17.17",
+    "prettier": "^3.0.0",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "axios": "^1.4.0",
+    "dayjs": "^1.11.9",
+    "express": "^4.18.2"
+  }
+}
