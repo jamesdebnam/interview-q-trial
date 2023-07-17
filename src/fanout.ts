@@ -10,16 +10,18 @@ router.post("/fanout", async (req, res) => {
     const requestDelays: number[] = Array.from(
       // number of requests
       { length: Number(parallel) },
+      // delay between 1s and maxdelay
       () => Math.random() * (Number(maxdelay) - 1) + 1,
     );
-    console.log(requestDelays);
     const startTime = dayjs();
+
     await Promise.all(
       requestDelays.map(async (delay) => {
         return await axios.get(`http://0.0.0.0:8088/delay/${delay}`);
       }),
     );
 
+    // total time taken in ms
     const totalTimeTaken = dayjs().diff(startTime);
     return res.send({ totalTimeTaken });
   } catch (e: any) {
